@@ -35,7 +35,8 @@ export const useAuthStore = defineStore('auth', () => {
 
   async function login(username, password) {
     try {
-      const response = await fetch('http://localhost:8000/api/v1/login/', {
+      const response = await fetch('https://deploy-django-backend.onrender.com/api/v1/login/', {
+        // const response = await fetch('http://localhost:8000/api/v1/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -57,7 +58,7 @@ export const useAuthStore = defineStore('auth', () => {
 
   async function register(userData) {
     try {
-      const response = await fetch('http://localhost:8000/api/v1/register/', {
+      const response = await fetch('https://deploy-django-backend.onrender.com/api/v1/register/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

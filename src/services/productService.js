@@ -1,7 +1,8 @@
 export default async function getProducts(){
     
     try {
-        const response = await fetch('http://localhost:8000/api/v1/scarpe')
+        const response = await fetch('https://deploy-django-backend.onrender.com/api/v1/scarpe')
+        // const response = await fetch('http://localhost:8000/api/v1/scarpe')
         
         // Controllo manuale dello stato HTTP
         if (!response.ok) {

@@ -13,7 +13,7 @@ const searchQuery = ref('')
 const selectedField = ref('all')
 console.log({ selectedField: selectedField.value })
 onMounted(() => {
-  fetch('http://localhost:8000/api/v1/libri/')
+  fetch('https://deploy-django-backend.onrender.com/api/v1/libri/')
     .then((response) => {
       // Controllo manuale dello stato HTTP
       if (!response.ok) {
@@ -31,7 +31,7 @@ onMounted(() => {
 
   console.log(libri.value)
 
-  fetch('http://localhost:8000/api/v1/autori')
+  fetch('https://deploy-django-backend.onrender.com/api/v1/autori')
     .then((response) => {
       // Controllo manuale dello stato HTTP
       if (!response.ok) {
